@@ -1,0 +1,11 @@
+name: check
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: shellcheck
+        run: shellcheck -s bash -S warning direct-access.sh install.sh
+      - name: offline tests
+        run: python3 -B -m unittest test_direct_access -v
