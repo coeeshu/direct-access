@@ -64,3 +64,7 @@ shellcheck -s bash -S warning direct-access.sh install.sh
 ```
 
 测试只在临时目录里生成配置，不会修改系统。
+
+## 鸣谢
+
+感谢 [LINUX DO](https://linux.do/) 社区。
